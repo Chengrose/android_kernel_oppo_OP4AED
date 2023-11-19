@@ -2770,8 +2770,9 @@ static void Audio_AmpHP_Change(int channels, bool enable)
 		 * __func__, mic_vinp_mv, Ana_Get_Reg(AUDDEC_ELR_0));
 		 */
 #endif
-		if (GetDLStatus() == true)
+		if (GetDLStatus() == true) {
 			TurnOnDacPower(AUDIO_ANALOG_DEVICE_OUT_HEADSETL);
+		}
 		/* here pmic analog control */
 			/* switch to ground to de pop-noise */
 			/*HP_Switch_to_Ground();*/
