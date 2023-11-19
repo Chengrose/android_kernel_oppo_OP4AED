@@ -660,7 +660,7 @@ bool client_mmu_matches(const struct tee_mmu *left,
 		return false;
 
 	/* Only need to compare contents of L2 page */
-	ret = !bcmp(left_page, right_page, PAGE_SIZE);
+	ret = !memcmp(left_page, right_page, PAGE_SIZE);
 	mc_dev_devel("MMU tables virt %p and %p %smatch", left, right,
 		     ret ? "" : "do not ");
 	return ret;
