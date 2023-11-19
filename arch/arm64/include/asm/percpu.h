@@ -106,7 +106,7 @@ PERCPU_OP(or, orr)
 
 static inline unsigned long __percpu_read(void *ptr, int size)
 {
-	unsigned long ret;
+	unsigned long ret = 0;
 
 	switch (size) {
 	case 1:
