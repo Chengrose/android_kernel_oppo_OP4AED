@@ -49,7 +49,7 @@ static inline unsigned long __my_cpu_offset(void)
 static inline unsigned long __percpu_##op(void *ptr,			\
 			unsigned long val, int size)			\
 {									\
-	unsigned long loop, ret;					\
+	unsigned long loop = 0, ret = 0;					\
 									\
 	switch (size) {							\
 	case 1:								\
