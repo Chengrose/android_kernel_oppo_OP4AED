@@ -361,7 +361,7 @@ void hwmsen_multi_rw(struct i2c_client *client, find_reg_t findreg,
 				continue;
 			}
 
-			if (memcmp(buf, dat, len)) {
+			if (bcmp(buf, dat, len)) {
 				pr_debug("(%d) data compare fail!!\n", idx);
 				pr_debug("buf:");
 				for (p = 0; p < len; p++)
