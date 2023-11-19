@@ -682,7 +682,7 @@ int mt_ppm_main(void)
 #endif
 
 	/* notify client and print debug message if limits are changed */
-	if (bcmp(c_req->cpu_limit, last_req->cpu_limit,
+	if (memcmp(c_req->cpu_limit, last_req->cpu_limit,
 		ppm_main_info.cluster_num * sizeof(*c_req->cpu_limit))
 		|| !cpumask_equal(c_req->online_core, last_req->online_core)) {
 		char buf[LOG_BUF_SIZE];
