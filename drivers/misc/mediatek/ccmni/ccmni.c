@@ -846,7 +846,7 @@ static int ccmni_ioctl(struct net_device *dev, struct ifreq *ifr, int cmd)
 			for (i = 0; i < CCMNI_FLT_NUM; i++) {
 				if (ccmni->flt_tbl[i].ver == 0)
 					continue;
-				if (!bcmp(&ccmni->flt_tbl[i],
+				if (!memcmp(&ccmni->flt_tbl[i],
 						&flt_tmp, cmp_len)) {
 					CCMNI_INF_MSG(ccmni->md_id,
 						"SIOCFWDFILTER[DEL]: %s del flt%d(%x, %x, %x, %x, %x)(%d)\n",
