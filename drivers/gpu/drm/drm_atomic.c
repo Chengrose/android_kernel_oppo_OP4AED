@@ -328,7 +328,7 @@ int drm_atomic_set_mode_for_crtc(struct drm_crtc_state *state,
 	struct drm_mode_modeinfo umode;
 
 	/* Early return for no change. */
-	if (mode && bcmp(&state->mode, mode, sizeof(*mode)) == 0)
+	if (mode && memcmp(&state->mode, mode, sizeof(*mode)) == 0)
 		return 0;
 
 	drm_property_unreference_blob(state->mode_blob);
