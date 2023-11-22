@@ -1,5 +1,0 @@
-# Power Related
-config MTK_PMIC
-	bool "MediaTek PMIC driver"
-	---help---
-	  MediaTek PMIC driver
