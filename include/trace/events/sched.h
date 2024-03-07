@@ -31,12 +31,7 @@
 #define _MT_TASK_STATE_MASK  ((TASK_STATE_MAX - 1) & \
 			      ~(TASK_WAKEKILL | TASK_PARKED | TASK_NOLOAD))
 
-/*
- *debug
-*/
 
-struct clb_stats;
-struct hmp_statisic;
 
 /*
  * Tracepoint for calling kthread_stop, performed to end a kthread:
