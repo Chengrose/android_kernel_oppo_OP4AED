@@ -1,4 +1,3 @@
-#include <linux/sched/sched.h>
 #undef TRACE_SYSTEM
 #define TRACE_SYSTEM sched
 
