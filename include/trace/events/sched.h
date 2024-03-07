@@ -31,27 +31,6 @@
 			      ~(TASK_WAKEKILL | TASK_PARKED | TASK_NOLOAD))
 
 
-struct clb_stats {
-	int ncpu;                  /* The number of CPU */
-	int ntask;                 /* The number of tasks */
-	int load_avg;              /* Arithmetic average of task load ratio */
-	int cpu_capacity;          /* Current CPU capacity */
-	int cpu_power;             /* Max CPU capacity */
-	int acap;                  /* Available CPU capacity */
-	int scaled_acap;           /* Scaled available CPU capacity */
-	int scaled_atask;          /* Scaled available task */
-	int threshold;             /* Dynamic threshold */
-#ifdef CONFIG_SCHED_HMP_PRIO_FILTER
-	int nr_normal_prio_task;   /* The number of normal-prio tasks */
-	int nr_dequeuing_low_prio; /* The number of dequeuing low-prio tasks */
-#endif
-};
-
-struct hmp_statisic {
-	unsigned int nr_force_up;
-	unsigned int nr_force_down;
-};
-
 /*
  * Tracepoint for calling kthread_stop, performed to end a kthread:
  */
